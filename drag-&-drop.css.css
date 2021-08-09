@@ -44,13 +44,21 @@ body {
 .lista .persona {
 	background: #fff;
 	display: grid;
-	grid-template-columns: auto 1fr 1fr 1fr;
+	grid-template-columns: 100px 1fr 1fr 250px;
+	gap: 2rem;
 	align-items: center;
 	padding: 20px;
 	border-radius: 10px;
 	margin-bottom: 20px;
 	cursor: move;
 }
+
+@media screen and (max-width:768px){
+	.lista .persona {
+		grid-template-columns: 1fr;
+	}
+}
+
 
 .lista  .persona.seleccionado {
     transform: scale(1.02) rotate(-1deg);
